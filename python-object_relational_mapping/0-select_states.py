@@ -9,7 +9,7 @@ try:
         db="hbtn_0e_0_usa",
         port=3306
     )
-    
+
     # Create a cursor object to interact with the database
     cursor = db.cursor()
     
