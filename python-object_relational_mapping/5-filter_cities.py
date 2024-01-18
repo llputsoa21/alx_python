@@ -1,5 +1,3 @@
-# this module contains SQL scripts that lists all cities fromina state from a adatabase
-
 if __name__ == "__main__":
     from sys import argv
     import MySQLdb

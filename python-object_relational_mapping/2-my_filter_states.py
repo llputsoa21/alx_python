@@ -1,4 +1,3 @@
-# this module contains SQL scripts that displays  all values from the states table in a database where name matches an argument
 if __name__ == "__main__":
     from sys import argv
     import MySQLdb

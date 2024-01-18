@@ -1,5 +1,3 @@
-# this module contains SQL scripts that displays all values from a table in a adatabase
-
 if __name__ == "__main__":
     from sys import argv
     import MySQLdb

@@ -1,5 +1,3 @@
-#this modules lists all states from a database
-
 if __name__ == "__main__":
     
     '''importing from sys, model_state and sqlalchely'''
