@@ -1,4 +1,4 @@
-# this module contains SQL scripts that lists all states from a database which start with "N"
+# this module contains SQL scripts that lists all cities from a adatabase
 
 if __name__ == "__main__":
     from sys import argv
@@ -17,15 +17,17 @@ if __name__ == "__main__":
     # Create a cursor object to interact with the database
     cursor = db.cursor()
 
-    # Execute the SQL query to retrieve states
-    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
+    # Execute the SQL query to retrieve all cities
+    cursor.execute("SELECT cities.id, cities.name, states.name FROM cities\
+                    INNER JOIN states ON cities.state_id=states.id\
+                    ORDER BY cities.id ASC")
 
     # Fetch all the rows
-    states = cursor.fetchall()
+    cities = cursor.fetchall()
 
     # Display the results
-    for state in states:
-        print(state)
+    for city in cities:
+        print(city)
 
 
     # Close the cursor and connection

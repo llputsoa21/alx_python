@@ -1,4 +1,4 @@
-# this module contains SQL scripts that lists all states from a database which start with "N"
+# this module contains SQL scripts that displays all values from a table in a adatabase
 
 if __name__ == "__main__":
     from sys import argv
@@ -17,8 +17,10 @@ if __name__ == "__main__":
     # Create a cursor object to interact with the database
     cursor = db.cursor()
 
-    # Execute the SQL query to retrieve states
-    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
+    # Execute the SQL query to retrieve states where name matches the argument and is injection safe
+    cursor.execute("SELECT * FROM states\
+                    WHERE name LIKE %s\
+                    ORDER BY states.id ASC", (argv[4],))
 
     # Fetch all the rows
     states = cursor.fetchall()
