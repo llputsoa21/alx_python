@@ -1,5 +1,3 @@
-# this module contains SQL scripts that lists all states from a database which start with "N"
-
 if __name__ == "__main__":
     from sys import argv
     import MySQLdb
